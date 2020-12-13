@@ -18,7 +18,7 @@ header
   width: 100%
   height: 90px
   display: grid
-  grid-template-rows: 2fr
+  grid-template-rows: 1fr
   grid-template-columns: 130px 700px 1fr
 
 .logo-container
@@ -33,6 +33,62 @@ header
   grid-column: 2 / span 1
   align-self: center
   justify-self: start
+  width: 100%
+  height: 44px
+  border-radius: 30px
+  border: 1px solid #dfe1e5
+  &:hover
+    box-shadow: 0 1px 6px rgba(32,33,36,.28)
+
+.search-field-form
+  width: 100%
+  height: 100%
+  display: grid
+  grid-template-columns: 1px 1fr 30px 20px 40px
+  grid-template-rows: 1fr
+  grid-gap: 20px
+  .search-field-input
+    grid-column: 2 / span 1
+    width: 100%
+    height: 26px
+    border: none
+    outline: none
+    align-self: center
+    border-right: 1px solid #dfe1e5
+    padding-right: 20px
+    margin-top: -2px
+  .keyboard-icon
+    grid-column: 3 / span 1
+    align-self: center
+    justify-self: center
+    color: #7B7B7B
+    font-size: 18px
+  .search-field-mic-icon
+    grid-column: 4 / span 1
+    align-self: center
+    justify-self: center
+    width: 25px
+    height: 25px
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: 1fr
+    svg
+      grid-column: 1 / 2
+      align-self: center
+      justify-self: center
+  .search-field-submit
+    grid-column: 5 / span 1
+    align-self: center
+    justify-self: center
+    width: 100%
+    height: 100%
+    background: none
+    border: none
+    outline: none
+    color: #4285F4
+    font-size: 18px
+    text-align: left
+
 
 .menu-container
   grid-column: 3 / span 1
@@ -44,7 +100,6 @@ a
   text-decoration: none
   &:hover
     text-decoration: underline
-
 
 
 
@@ -92,3 +147,130 @@ a
   height: 40px
   border-radius: 50%
   background-color: #1E212D
+
+.menu-search-type
+  grid-column: 1 / span 5
+  border-bottom: 1px solid #EBEBEB
+  display: grid
+  grid-template-columns: 170px 700px 1fr
+  grid-template-rows: 28px
+
+.menu-search-type-container
+  grid-column: 2 / span 1
+  display: grid
+  grid-template-columns: min-content auto 30px
+
+.menu-search-type-item-list
+  grid-column: 1 / span 1
+  width: auto
+  list-style-type: none
+  display: inline-grid
+  grid-template-columns: min-content min-content min-content min-content min-content
+  grid-template-rows: 1fr
+
+  a
+    display: inline-block
+    color: #5f6368
+    padding: 0 30px 10px 15px
+    text-decoration: none
+    &:hover, &:active
+      border-bottom: 3px solid #1A73E8
+      text-decoration: none
+  a.active
+    border-bottom: 3px solid #1A73E8
+.menu-search-type-item
+  white-space: nowrap
+  span
+    float: left
+    padding-right: 8px
+
+.menu-search-type-submenu
+  grid-column: 2 / span 1
+  display: inline-block
+  justify-self: end
+  nav
+
+
+.menu-search-type-submenu-list
+  width: 100%
+  display: grid
+  grid-template-columns: min-content min-content
+  list-style-type: none
+  grid-gap: 20px
+
+.menu-search-type-submenu-list
+  justify-self: end
+
+.results-count-container
+  grid-column: 1/ span 5
+  display: grid
+  grid-template-columns: 180px 700px 1fr
+  grid-template-rows: 36px
+
+.results-count-text
+  grid-column: 2 / span 1
+  align-self: center
+  color: #70757a
+
+.global-grid-spacer
+  grid-column: 1/ span 5
+  height: 40px
+
+.search-results-container
+  grid-column: 1/ span 5
+  display: grid
+  grid-template-columns: 180px 700px 1fr
+
+.search-result-list
+  grid-column: 2 / span 1
+
+.search-result-item
+  &:hover
+    a
+      text-decoration: underline
+
+.search-result-item-breadcrumb
+
+.search-result-item-breadcrumb > ul
+  list-style-type: none
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+
+.search-result-item-breadcrumb > ul > li
+  float: left
+  margin-left: 5px
+  color: #5f6368
+
+.search-result-item-breadcrumb > ul > li:before
+  content: "›  "
+
+.search-result-item-breadcrumb > ul > li:first-of-type
+  margin-left: 0
+  color: #202124
+
+.search-result-item-breadcrumb > ul > li:first-of-type:before
+  content: unset
+
+.search-result-item-breadcrumb > ul > li:nth-child(1) > a
+  color: #202124
+  text-decoration: none
+
+.search-result-item-title
+  margin-top: 10px
+
+.search-result-item-title > a
+  font-size: 22px
+  color: #1a0dab
+  text-decoration: none
+  &:hover
+    text-decoration: underline
+
+.search-result-item
+  margin-top: 30px
+
+.search-result-item > p
+  margin-top: 5px
+  line-height: 22px
+  color: #4d5156
+
