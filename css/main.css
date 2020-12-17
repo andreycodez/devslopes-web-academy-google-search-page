@@ -8,13 +8,21 @@ body {
   font-family: arial, sans-serif;
   font-size: 13px; }
 
-.footer-devider {
-  width: 100%;
-  min-height: 80px; }
+.title {
+  font-size: 20px; }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: 30px 130px 700px 1fr 30px; }
+.bottom-border-grey {
+  border-bottom: 1px solid #DFE1E5; }
+
+a {
+  color: rgba(0, 0, 0, 0.87);
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+.global-grid-spacer {
+  grid-column: 1/span 5;
+  height: 40px; }
 
 header {
   grid-column: 2/span 3;
@@ -31,6 +39,78 @@ header {
   .logo-container img {
     width: 92px;
     height: 33px; }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 30px 130px 700px 1fr 30px; }
+
+footer {
+  width: 100%;
+  height: 50px;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 30px 1fr 30px;
+  background-color: #f2f2f2;
+  border-top: 1px solid #DADCE0; }
+  footer a {
+    color: #70757a; }
+  footer .footer-menu-container {
+    grid-column: 2/span 1;
+    align-self: center; }
+
+.footer-devider {
+  width: 100%;
+  min-height: 80px; }
+
+.menu-container {
+  grid-column: 3/span 1;
+  align-self: center;
+  justify-self: end; }
+
+.menu-list {
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  align-items: center; }
+
+.right-flex-aligned {
+  justify-content: flex-end; }
+
+.left-flex-aligned {
+  justify-content: flex-start; }
+
+.link-padding-fixer {
+  padding-top: 3px; }
+
+.menu-list li {
+  padding-left: 15px; }
+
+.menu-list li:nth-child(1) {
+  padding-left: 0; }
+
+.features-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .features-link:hover {
+    background-color: #EDEFF0; }
+
+.features-link a {
+  font-size: 14px;
+  color: #5f6368;
+  opacity: 1; }
+
+.flex-link {
+  display: flex; }
+
+.avatar-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #1E212D; }
 
 .search-field-container {
   grid-column: 2/span 1;
@@ -91,62 +171,6 @@ header {
     color: #4285F4;
     font-size: 18px;
     text-align: left; }
-
-.menu-container {
-  grid-column: 3/span 1;
-  align-self: center;
-  justify-self: end; }
-
-a {
-  color: rgba(0, 0, 0, 0.87);
-  text-decoration: none; }
-  a:hover {
-    text-decoration: underline; }
-
-.menu-list {
-  width: 100%;
-  list-style-type: none;
-  display: flex;
-  align-items: center; }
-
-.right-flex-aligned {
-  justify-content: flex-end; }
-
-.left-flex-aligned {
-  justify-content: flex-start; }
-
-.link-padding-fixer {
-  padding-top: 3px; }
-
-.menu-list li {
-  padding-left: 15px; }
-
-.menu-list li:nth-child(1) {
-  padding-left: 0; }
-
-.features-link {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-  .features-link:hover {
-    background-color: #EDEFF0; }
-
-.features-link a {
-  font-size: 14px;
-  color: #5f6368;
-  opacity: 1; }
-
-.flex-link {
-  display: flex; }
-
-.avatar-image {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #1E212D; }
 
 .menu-search-type {
   grid-column: 1/span 5;
@@ -209,10 +233,6 @@ a {
   grid-column: 2/span 1;
   align-self: center;
   color: #70757a; }
-
-.global-grid-spacer {
-  grid-column: 1/span 5;
-  height: 40px; }
 
 .search-results-container {
   grid-column: 1/span 5;
@@ -306,12 +326,6 @@ a {
   .search-item-bottom-answers-item span {
     grid-column: 2/span 1; }
 
-.title {
-  font-size: 20px; }
-
-.bottom-border-grey {
-  border-bottom: 1px solid #DFE1E5; }
-
 .dropdown {
   font-size: 18px;
   line-height: 16px; }
@@ -333,19 +347,5 @@ a {
     grid-area: logo; }
   .paginator .pagination {
     grid-area: pagination; }
-
-footer {
-  width: 100%;
-  height: 50px;
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 30px 1fr 30px;
-  background-color: #f2f2f2;
-  border-top: 1px solid #DADCE0; }
-  footer a {
-    color: #70757a; }
-  footer .footer-menu-container {
-    grid-column: 2/span 1;
-    align-self: center; }
 
 /*# sourceMappingURL=main.css.map */
